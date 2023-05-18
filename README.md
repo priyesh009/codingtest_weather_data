@@ -114,7 +114,7 @@ You can use this command in the terminal: **python -m unittest unittest_app.py**
 
 It is the SQLITE database files which containts the WeatherData and WeatherStatistics. Due to large size I was not able to add the file in github. However, You can download it from below link.
 
-Database Schema Link: [Click here](.docs/)
+Database Schema Link: [Click here](docs/db_schema.pdf)
 
 Database file link: [Click here](https://drive.google.com/file/d/1PsEuvXxUVQUC3ZCtlEy0HcQKyKF6d0Sg/view?usp=share_link)
 
@@ -135,7 +135,7 @@ It contains list of required modules
 The main.py file handles the setup of the SQLite database, data ingestion from .txt files, and weather statistics calculation. The app.py file sets up the Flask application and defines APIs for accessing weather data and statistics stored in the database. By following the provided documentation, you can run the application and access the weather data through the defined APIs.
 
 
-## How to deploye this the project in your system?
+## How to deploy this project in your system?
 
 - Clone this repository
 - Place the weather_data.db in the parent folder i.e codingtest_weather_data (Optional)
