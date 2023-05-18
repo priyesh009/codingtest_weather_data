@@ -3,12 +3,33 @@
 ## Introduction
 This technical documentation provides an overview of Weather API App. The data ingestion and API setup process for a weather data application. The main.py file handles the setup of the database and data ingestion, while the app.py file sets up the APIs for accessing the weather data.
 
+### Weather Data Description
+
+
+The wx_data directory has files containing weather data records from 1985-01-01 to 2014-12-31. Each file corresponds to a particular weather station from Nebraska, Iowa, Illinois, Indiana, or Ohio.
+
+Each line in the file contains 4 records separated by tabs: 
+
+
+1. The date (YYYYMMDD format)
+
+2. The maximum temperature for that day (in tenths of a degree Celsius)
+
+3. The minimum temperature for that day (in tenths of a degree Celsius)
+
+4. The amount of precipitation for that day (in tenths of a millimeter)
+
+Missing values are indicated by the value -9999.
+
+**Data source:** https://github.com/corteva/code-challenge-template
+
+
 ## Architecture Diagram
 
 ![](./docs/corteva_arch.png)
 
 ## Code Files
-### main.py
+### main.py (Problem 2 Solution)
 This file is responsible for setting up the SQLite database and ingesting weather data into it.
 
 #### Dependencies
@@ -42,7 +63,7 @@ Weather statistics are calculated and stored in the WeatherStatistics table usin
 
 The calculated statistics include average maximum temperature, average minimum temperature, and total precipitation for each unique combination of year and station ID.
 
-### app.py
+### app.py (Problem 4 Solution)
 This file sets up the Flask application and defines APIs for accessing the weather data.
 
 #### Dependencies
@@ -110,7 +131,7 @@ The test runner executes all the test cases within the AppTestCase class.
 You can use this command in the terminal: **python -m unittest unittest_app.py**
 
 
-### weather_data.db
+### weather_data.db (Problem 1 and 3 Solution)
 
 It is the SQLITE database files which containts the WeatherData and WeatherStatistics. Due to large size I was not able to add the file in github. However, You can download it from below link.
 
@@ -152,7 +173,7 @@ Weather Stats API: http://localhost:8000/api/weather/stats?date=2000
 
 
 
-## Deployment in AWS 
+## Deployment in AWS (Extra Credit)
 
 ### Architecture Diagram
 
