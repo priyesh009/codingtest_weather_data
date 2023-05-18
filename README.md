@@ -48,20 +48,28 @@ This file sets up the Flask application and defines APIs for accessing the weath
 #### Dependencies
 sqlite3: The sqlite3 module is imported to work with the SQLite database.
 Flask: The Flask module is used to create and configure the Flask application.
+
 request: The request module is used to handle incoming requests and retrieve query parameters.
+
 jsonify: The jsonify module is used to convert Python objects to JSON format.
+
 API Setup
 The Flask application is created using Flask(__name__).
+
 The Swagger UI is configured using the get_swaggerui_blueprint() function from flask_swagger_ui.
 The Swagger UI blueprint is registered with the Flask application using app.register_blueprint().
+
 The /api/weather endpoint is defined with the GET method to retrieve weather data from the WeatherData table based on provided query parameters.
+
 The /api/weather/stats endpoint is defined with the GET method to retrieve weather statistics data from the WeatherStatistics table based on provided query parameters.
+
 The get_weather() function handles the /api/weather endpoint request.
 The get_weather_stats() function handles the /api/weather/stats endpoint request.
 Within these functions, the SQLite database is connected to, and query parameters are retrieved from the request.
 The appropriate SQL query is constructed based on the provided query parameters.
 The query is executed, and the resulting rows are fetched.
 The fetched data is converted to a list of dictionaries using a sqlite3.Row object.
+
 The JSON response is generated using jsonify() and returned.
 Running the Application
 The Flask application is run using app.run() with debug mode enabled and on port 8000.
@@ -106,9 +114,9 @@ You can use this command in the terminal: **python -m unittest unittest_app.py**
 
 It is the SQLITE database files which containts the WeatherData and WeatherStatistics. Due to large size I was not able to add the file in github. However, You can download it fron below link.
 
-Database Schema Link: [Click here](.docs/db_schema.pdf)
+Database Schema Link: [Click here](.docs/)
 
-Database file link
+Database file link: [Click here](https://drive.google.com/file/d/1PsEuvXxUVQUC3ZCtlEy0HcQKyKF6d0Sg/view?usp=share_link)
 
 ### .pylintrc
 
