@@ -153,7 +153,7 @@ It contains data ingesation logs
 It contains list of required modules
 
 ## Conclusion
-The main.py file handles the setup of the SQLite database, data ingestion from .txt files, and weather statistics calculation. The app.py file sets up the Flask application and defines APIs for accessing weather data and statistics stored in the database. By following the provided documentation, you can run the application and access the weather data through the defined APIs.
+The main.py file handles the setup of the SQLite database, data ingestion from .txt files, and weather statistics calculation. The app.py file sets up the Flask application and defines APIs for accessing weather data and statistics stored in the database. 
 
 
 ## How to deploy this project in your system?
