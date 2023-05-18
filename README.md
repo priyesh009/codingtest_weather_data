@@ -112,7 +112,7 @@ You can use this command in the terminal: **python -m unittest unittest_app.py**
 
 ### weather_data.db
 
-It is the SQLITE database files which containts the WeatherData and WeatherStatistics. Due to large size I was not able to add the file in github. However, You can download it fron below link.
+It is the SQLITE database files which containts the WeatherData and WeatherStatistics. Due to large size I was not able to add the file in github. However, You can download it from below link.
 
 Database Schema Link: [Click here](.docs/)
 
@@ -121,6 +121,7 @@ Database file link: [Click here](https://drive.google.com/file/d/1PsEuvXxUVQUC3Z
 ### .pylintrc
 
 It contains pylint rules.
+
 You can use this command in the terminal for linting you code: **pylint uapp.py**
 
 ### data_ingestion.log
@@ -134,7 +135,24 @@ It contains list of required modules
 The main.py file handles the setup of the SQLite database, data ingestion from .txt files, and weather statistics calculation. The app.py file sets up the Flask application and defines APIs for accessing weather data and statistics stored in the database. By following the provided documentation, you can run the application and access the weather data through the defined APIs.
 
 
-## Deployment in AWS approach
+## How to deploye this the project in your system?
+
+- Clone this repository
+- Place the weather_data.db in the parent folder i.e codingtest_weather_data (Optional)
+- execute the requirements.txt file
+- execute the main.py and check the data_ingesation.log file for logs.
+- execute the app.py file go to below links for querying data using APIs
+
+Swagger Link: http://localhost:8000/swagger/#/default/get_api_weather_stats
+
+Weather data API: http://localhost:8000/api/weather?date=19850101
+
+Weather Stats API: http://localhost:8000/api/weather/stats?date=2000
+
+
+
+
+## Deployment in AWS 
 
 ### Architecture Diagram
 
@@ -156,20 +174,4 @@ To deploy the API, database, and a scheduled version of the data ingestion code 
 9. Using AWS service like codepiple, CloudFromation, CodeBuild, GitHub, etc. I will create a CICD pipeline and automate the deployment process with test driven approach.
 
 The overall approach would involve setting up the Elastic Beanstalk environment to deploy the Flask API, configuring the Amazon RDS instance to host the database, creating an AWS Lambda function for the data ingestion code and scheduling it using CloudWatch Events. CloudFormation would be used to define the infrastructure resources, and CloudWatch would provide monitoring and alerting capabilities. IAM would be used to manage access to resources, and Route 53 could be used for custom domain configuration if needed.
-
-
-## How to this the project in your system?
-
-- Clone this repository
-- Place the weather_data.db in the parent folder i.e codingtest_weather_data (Optional)
-- execute the requirements.txt file
-- execute the main.py and check the data_ingesation.log file for logs.
-- execute the app.py file go to below links for querying data using APIs
-
-Swagger Link: http://localhost:8000/swagger/#/default/get_api_weather_stats
-
-Weather data API: http://localhost:8000/api/weather?date=19850101
-
-Weather Stats API: http://localhost:8000/api/weather/stats?date=2000
-
 
