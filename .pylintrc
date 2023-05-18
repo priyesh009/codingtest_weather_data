@@ -1,0 +1,25 @@
+[MASTER]
+
+# Specify the maximum line length
+max-line-length=130
+
+[MESSAGES CONTROL]
+
+# Enable or disable specific pylint messages
+disable=missing-docstring,invalid-name
+
+[FORMAT]
+
+# Specify the output format for pylint
+# Options: text, colorized, pylint, parseable, json
+output-format=colorized
+
+[BASIC]
+
+# Set the severity level for specific pylint messages
+# Options: refactor, convention, warning, error, fatal
+# Note: The 'fatal' level will make pylint return a non-zero exit code for that message
+fail-under=8
+
+[TYPECHECK]
+
